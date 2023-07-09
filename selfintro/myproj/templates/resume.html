@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 0.4fr 1fr;
+            height: 950px;
+        }
+        .mohit{
+           
+            /* border: 2px solid black; */
+            margin: 10px 10px;
+            grid-template-rows: 1fr ;
+        }
+        #mohit{
+            background-color: rgb(77, 73, 73);
+        }
+
+        h1{
+            /* border: 2px solid black; */
+            margin-right: 80px;
+            background-color: rgb(173, 170, 170);
+            border-radius: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px 20px;
+        }
+
+        p{
+            margin-left: 30px;
+            margin-right: 50px;
+        }
+        .img{
+              height: 250px;
+              margin-left: 120px;
+              margin-top: 60px;
+              border-radius: 500px;
+        }
+
+        h2{
+            font-size: 55px;
+            padding: 10px 10px;
+            margin-left: 7px;
+        }
+
+        .persnol{
+            color: white ;
+        }
+
+        .per{
+            background-color: rgb(43, 42, 42);
+            color: white;
+            border: none;
+        }
+       
+    </style>
+</head>
+<body>
+    {% for i in collect %}
+    <div class="container">
+        <div class="mohit" id="mohit"> 
+            <div>
+                <img src="https://images.unsplash.com/photo-1568316674077-d72ee56de61c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="" class="img">
+            </div>
+            <div>
+                <h1  class="per">Persnol details</h1>
+                <p class="persnol">Address :{{i.address}}</p>
+                <p class="persnol">State :{{i.state}}</p>
+                <p class="persnol">Pin code :{{i.pncode}}</p>
+                <p class="persnol">Gender :{{i.gender}}</p>
+                <p class="persnol">Language :{{i.language}}</p>
+            </div>
+            <div>
+                <h1 class="per">Contact details</h1>
+                <p class="persnol">Mobile no: +91{{i.mobile_no}}</p>
+                <p class="persnol">Email id: {{i.email}}</p>
+            </div>
+        </div>
+        <div class="mohit" >
+            <div>
+                <h2>{{i.name}}</h2>
+            </div>
+            <div>
+                <h1>Objective</h1>
+                <p>{{i.objective}}</p>
+            </div>
+            <div>
+                <h1>Education</h1>
+                <p>{{i.education}} abc</p>
+            </div>
+            <div>
+                <h1>Work Experienc</h1>
+                 <p>{{i.work_experience}}</p>
+            </div>
+            <div>
+                <h1>Skills</h1>
+                <p>{{i.skill}}</p>
+            </div>
+            <div>
+                <h1>Certificates </h1>
+                <p>{{i.certificates}}</p>
+            </div>
+
+            <div>
+                <h1>Projects</h1>
+                <p>{{i.projects}}</p>
+            </div>
+        </div>
+    </div>
+    <i class="fa-brands fa-searchengin"></i>
+    {% endfor %}
+</body>
+</html>

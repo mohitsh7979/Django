@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+
+            display: flex;
+        }
+
+        .box{
+
+            height: 500px;
+            width: 500px;
+            margin: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        {% for i in c %}
+        <div class="box">
+            <p>Name:{{i.referral_table_id.referrer_id.name}}</p>  
+            <p>email:{{i.referral_table_id.referrer_id.email}}</p> 
+            <p>course:{{i.referral_table_id.referrer_id.course}}</p> 
+            <p>fees:{{i.referral_table_id.referrer_id.fees}}</p> 
+        </div>
+        <div class="box">
+            <p>Name:{{i.referral_table_id.referred_id.name}}</p>  
+            <p>email:{{i.referral_table_id.referred_id.email}}</p> 
+            <p>course:{{i.referral_table_id.referred_id.course}}</p> 
+            <p>fees:{{i.referral_table_id.referred_id.fees}}</p> 
+        </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

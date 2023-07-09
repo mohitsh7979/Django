@@ -1,0 +1,58 @@
+{% load static %}
+<div class="sidebar" id="sidebar">
+
+            <div class="sidebar-inner slimscroll">
+               <div id="sidebar-menu" class="sidebar-menu">
+                  <ul>
+                        
+                     <li>
+                        <a href="{% url 'admin_home' %}"><i class="fas fa-holly-berry"></i> <span>Dashboard</span></a>
+                     </li>
+
+                     <li class="submenu">
+                        <a href="#"><i class="fas fa-user-graduate"></i> <span> Employee</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           
+                           <li><a href="{% url 'add_farmer' %}">Add Farmer</a></li>
+                           <li><a href="/Admin/farm/farmer_detail/">View Farmer List</a></li>
+                           <li><a href="{% url 'add_dealer' %}">Add Dealer</a></li>
+                           <li><a href="/Admin/deal/farmer_detail/">View Dealer List</a></li>
+                           <li><a href="{% url 'add_distributor' %}">Add Distributor</a></li>
+                           <li><a href="/Admin/deal/farmer_detail/">View Distributor List</a></li>
+                           
+
+                        </ul>
+                     </li>
+                     <li class="submenu">
+                        <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Manager</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="{% url 'add_employee' %}">Employee Add</a></li>
+                           <li><a href="{% url 'view_employee' %}">Employee View</a></li>
+                        </ul>
+                     </li>
+
+
+
+                     <li>
+                        <a href="{% url 'resources' %}"><i class="fas fa-book"></i> <span>Resources</span></a>
+                     </li>
+                     <li>
+                        <a href="holiday.html"><i class="fa fa-calendar"></i> <span>View Employee Attendance</span></a>
+                     </li>
+                     <li>
+                        <a href="holiday.html"><i class="fas fa-comments"></i> <span>Employee Feedback</span></a>
+                     </li>
+                     <li>
+                        <a href="holiday.html"><i class="fas fa-comments"></i> <span>Manager Feedback</span></a>
+                     </li>
+                     <li>
+                        <a href="holiday.html"><i class="fas fa-envelope"></i> <span>Employee Leave</span></a>
+                     </li>
+                     <li><i class=""></i>
+                        <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+                     </li>
+
+                  </ul>
+               </div>
+            </div>
+         </div>
